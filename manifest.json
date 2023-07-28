@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "GSearch GPT Assistant",
+  "version": "1.0",
+  "description": "Whatever you search in Chrome will be searched in GPT, and results will be shown in a popup window.",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon48.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
